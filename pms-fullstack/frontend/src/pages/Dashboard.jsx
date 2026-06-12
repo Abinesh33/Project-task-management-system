@@ -84,13 +84,13 @@ export default function Dashboard({ projects, tasks, onNavigate, onAddProject, o
             : (
               <div className="table-wrap">
                 <table>
-                  <thead><tr><th>Project</th><th>Lead</th><th>Status</th><th>Deadline</th></tr></thead>
+                  <thead><tr><th>Project</th><th>Lead</th><th>Deadline</th></tr></thead>
                   <tbody>
                     {projects.slice(0, 5).map((p) => (
                       <tr key={p._id}>
                         <td style={{ fontWeight: 600 }}>{p.name}</td>
                         <td>{p.lead}</td>
-                        <td><Badge status={p.status} /></td>
+                        
                         <td className={deadlineClass(p.deadline, p.status)}>{fmtDate(p.deadline)}</td>
                       </tr>
                     ))}
