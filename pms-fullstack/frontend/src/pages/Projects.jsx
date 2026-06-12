@@ -47,7 +47,7 @@ export default function Projects({ projects, onAddProject }) {
             <div className="project-card" key={p._id} style={{ borderTopColor: borderColor(p.status) }}>
               <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', marginBottom: 8 }}>
                 <div className="project-card-title">{p.name}</div>
-                <Badge status={p.status} />
+                
               </div>
               <div className="project-card-desc">{p.desc || 'No description.'}</div>
               <div className="project-card-lead">
